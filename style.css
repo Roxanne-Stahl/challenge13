@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+/* || RESET */
+*
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+    list-style: none;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+/* || VARIABLES */
+:root {
+    /* FONTS */
+    --FONT-FAMILY: 'League Spartan', sans-serif;
+    --FONT-400: 400;
+    --FONT-500: 500;
+    --FONT-700: 700;
+
+    /* COLORS */
+    --DARK-MAGENTA:hsl(300, 43%, 22%);
+    --PINK: hsl(333, 80%, 67%);
+    
+    --MAUVE: hsl(303, 10%, 53%);
+    --WHITE: hsl(0, 0%, 100%);
+    --LIGHT-GRAY: hsl(300, 24%, 96%);
+}
+/* || GENERAL STYLES */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: var(--FONT-FAMILY);
+} 
+header {
+    display: flex;
+    width: 70rem;
+    gap: 8rem;
+    margin: 0 auto;
+}
+.hero {
+    width:28rem;
+    margin-top: 7rem;
+}
+h1 {
+    font-weight: var(--FONT-700);
+    font-size: 3.5rem;
+    line-height: 48px;
+    letter-spacing: -2px;
+    color: var(--DARK-MAGENTA); 
+}
+.hero__paragraph {
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 25px;
+    letter-spacing: -0.633333px;
+    color: var(--MAUVE);
+}
+.ratings {
+    margin-top: 9rem;
+    width: 34rem;
+}
+.rating {
+    display: flex;
+    gap: 2rem;
+    width: 28rem;
+    background: #F7F2F7;
+    border-radius: 8px;
+}
+.stars {
+    display: flex;
+    margin-left: 2rem;
+}
+.review {
+    font-weight: var(--FONT-700);
+    font-size: 1.0625rem;
+    line-height: 16px;
+    color:  var(--DARK-MAGENTA); 
+}
+.testimonials {
+    margin: 0 auto;    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 70rem;    
+}
+.buyer {
+    margin-top: 4.5rem;
+    display: flex;
+    background: var(--DARK-MAGENTA);
+    width: 22rem;
+    height: 16rem;
+    border-radius: 8px;
+}
+.buyer img {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 1.5rem;
+    border-radius: 100%;
+}
+#buyer2 {
+    margin-top: 5.5rem;
+}
+#buyer3 {
+    margin-top: 6.5rem;
+}
+.profile {
+    display: flex;
+}
+.user {
+    display: grid;
+    grid-template: column;
+    margin-left: 1.5rem;
+}
+.name {
+    margin-top: 1.5rem;
+    font-weight: var(--FONT-700);
+    font-size: 1.1rem;
+    line-height: 16px;
+    color: var(--WHITE);
+}
+.status {
+    margin-top: -.5rem;
+    font-weight: var(--FONT-400);
+    font-size: 1.1rem;
+    line-height: 16px;
+    color: var(--PINK);
+}
+.quote {
+    font-weight: var(--FONT-400);
+    font-size: 1.1rem;
+    line-height: 22px;
+    letter-spacing: -0.303571px;
+    color: var(--WHITE);
+    
+}
+/* || FOOTER */
+
+.attribution { 
+    margin-top: 4rem;
+    font-size: 11px; 
+    text-align: center;
+    color: var(--DARK-MAGENTA);
+}
+.attribution a { 
+    color: var(--PINK);
+    text-decoration: none; 
+}
+
+/* ||  MEDIA QUERIES   */
+
+@media screen and (max-width: 1007px){
+    body {
+        background-image: url(images/bg-pattern-bottom-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+    header {
+        display: grid;
+        width: 20.5rem;
+        gap: 2rem;
+        margin: 0 auto;background-image: url(images/bg-pattern-top-mobile.svg);          
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+    .hero {
+        width:20.5rem;
+        margin-top: 5rem;
+    }
+    h1 {
+        font-weight: var(--FONT-700);
+        font-size: 2.5rem;
+        line-height: 32px;
+        letter-spacing: -1.42857px;
+        color: var(--DARK-MAGENTA); 
+    }
+    .ratings {
+        margin-top: 1rem;
+        width: 20.5rem;
+    }
+    .rating {
+        display: grid;
+        width: 20.5rem;
+        background: #F7F2F7;
+        border-radius: 8px;
+    }
+    #rating2, #rating3 {
+        margin-top: 1rem;
+    }
+    .stars {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto
+    }
+    .review {
+        margin-top: -2rem;
+    }
+    .testimonials {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 20rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #buyer2, #buyer3 {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 1008px) {
+    header {
+        background-image: url(images/bg-pattern-top-desktop.svg);          
+        background-repeat: no-repeat;
+    }
+    body {
+        background-image: url(images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+    #rating2 {
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+    #rating3 {
+        margin-left: 4rem;
+        margin-top: 2rem;
+    }
+}
